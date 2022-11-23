@@ -1,10 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+import "./css/style.css";
+import DrumPadsContainer from './components/DrumPadsContainer';
+import DisplayContainer from "./components/DisplayContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App container">
+      <div className="row" id="drum-machine">
+        <DrumPadsContainer></DrumPadsContainer>
+        <DisplayContainer></DisplayContainer>
+      </div>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
