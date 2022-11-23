@@ -3,7 +3,7 @@ import React from "react";
 const DrumPad = (props) => {
   return (
     // <div className="drum-pad-container drum-pad col-sm-4">
-    <button className="drum-pad col-sm-4" id={props.letter}>
+    <button className="drum-pad col-sm-4" id={props.letter} onClick={props.playAudio}>
       {props.letter}
       <audio
         src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"

@@ -7,15 +7,15 @@ const thirdRowPads = ["Z", "X", "C"];
 
 const DrumPadsContainer = (props) => {
   const firstRowPadsDisplay = firstRowPads.map((letter) => {
-    return <DrumPad letter={letter} key={letter}></DrumPad>;
+    return <DrumPad letter={letter} key={letter} playAudio={props.playAudio}></DrumPad>;
   });
 
   const secondRowPadsDisplay = secondRowPads.map((letter) => {
-    return <DrumPad letter={letter} key={letter}></DrumPad>;
+    return <DrumPad letter={letter} key={letter} playAudio={props.playAudio}></DrumPad>;
   });
 
   const thirdRowPadsDisplay = thirdRowPads.map((letter) => {
-    return <DrumPad letter={letter} key={letter}></DrumPad>;
+    return <DrumPad letter={letter} key={letter} playAudio={props.playAudio}></DrumPad>;
   });
 
   return (

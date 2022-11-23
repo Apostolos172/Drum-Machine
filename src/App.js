@@ -3,12 +3,24 @@ import "./App.css";
 import "./css/style.css";
 import DrumPadsContainer from './components/DrumPadsContainer';
 import DisplayContainer from "./components/DisplayContainer";
+import { useState } from "react";
 
 function App() {
+
+  const [displayText, setDisplayText] = useState("");
+  const playAudio = (event) => {
+    console.log(event.target.id);
+    let audio = document.querySelector("#"+event.target.id+" > audio");
+    console.log(audio);
+    audio.play();
+    setDisplayText(audio.id);
+    console.log(displayText);
+  }
+
   return (
     <div className="App container">
       <div className="row" id="drum-machine">
-        <DrumPadsContainer></DrumPadsContainer>
+        <DrumPadsContainer playAudio={playAudio}></DrumPadsContainer>
         <DisplayContainer></DisplayContainer>
       </div>
       {/* <header className="App-header">
