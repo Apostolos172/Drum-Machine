@@ -14,7 +14,7 @@ function App() {
     console.log(audio);
     audio.play();
     setDisplayText(audio.id);
-    console.log(displayText);
+    console.log(audio.id);
   }
 
   return (
