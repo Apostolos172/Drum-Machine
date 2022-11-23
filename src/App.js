@@ -7,13 +7,14 @@ import { useState } from "react";
 
 function App() {
 
-  const [displayText, setDisplayText] = useState("");
+  const [displayText, setDisplayText] = useState("Nothing important to display");
   const playAudio = (event) => {
-    console.log(event.target.id);
-    let audio = document.querySelector("#"+event.target.id+" > audio");
+    let id = event.target.id
+    console.log(id);
+    let audio = document.querySelector("#"+id+" > audio");
     console.log(audio);
     audio.play();
-    setDisplayText(audio.id);
+    setDisplayText(id);
     console.log(audio.id);
   }
 
@@ -21,7 +22,7 @@ function App() {
     <div className="App container">
       <div className="row" id="drum-machine">
         <DrumPadsContainer playAudio={playAudio}></DrumPadsContainer>
-        <DisplayContainer></DisplayContainer>
+        <DisplayContainer displayText={displayText}></DisplayContainer>
       </div>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

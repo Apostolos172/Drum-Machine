@@ -4,7 +4,7 @@ import React from "react";
 const DisplayContainer = (props) => {
   return (
     <div className="display-container row col-sm-4">
-      <div className="" id="display">Nothing important to display</div>
+      <div className="" id="display">{props.displayText}</div>
     </div>
   );
 };
