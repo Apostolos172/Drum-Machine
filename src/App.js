@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
 
-  const [displayText, setDisplayText] = useState("Nothing important to display");
+  const [displayText, setDisplayText] = useState("Press a drum pad to hear something!");
   const playAudio = (event) => {
     let id = event.target.id
     console.log(id);
@@ -18,7 +18,20 @@ function App() {
     console.log(audio.id);
   }
 
+  document.onkeydown = function (e) {
+    console.log('key down');
+    console.log(e);
+    console.log(e.key);
+    let audioElement = document.getElementById(e.key.toUpperCase());
+    if(audioElement) {
+      audioElement.play();
+      let id = audioElement.parentElement.id;
+      setDisplayText(id);
+    }
+  };
+
   return (
+    // <div className="App container" contentEditable onKeyDown={KeyPressed}> // Θα έπρεπε να υπήρχε κάτι τέτοιο, απαγορευτικό
     <div className="App container">
       <div className="row" id="drum-machine">
         <DrumPadsContainer playAudio={playAudio}></DrumPadsContainer>
