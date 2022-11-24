@@ -1,5 +1,13 @@
 # Drum Machine
 
+Built with React
+<br>
+Deployed on Vercel
+
+### A screenshot of the app
+
+![drum machine](https://github.com/Apostolos172/Drum-Machine/blob/master/screenshots/drum%20machine.png?raw=true)
+
 <!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
