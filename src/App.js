@@ -10,18 +10,18 @@ function App() {
   const [displayText, setDisplayText] = useState("Press a drum pad to hear something!");
   const playAudio = (event) => {
     let id = event.target.id
-    console.log(id);
+    // console.log(id);
     let audio = document.querySelector("#"+id+" > audio");
-    console.log(audio);
+    // console.log(audio);
     audio.play();
     setDisplayText(id);
-    console.log(audio.id);
+    // console.log(audio.id);
   }
 
   document.onkeydown = function (e) {
-    console.log('key down');
-    console.log(e);
-    console.log(e.key);
+    // console.log('key down');
+    // console.log(e);
+    // console.log(e.key);
     let audioElement = document.getElementById(e.key.toUpperCase());
     if(audioElement) {
       audioElement.play();
